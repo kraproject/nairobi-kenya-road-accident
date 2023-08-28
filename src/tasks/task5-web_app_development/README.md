@@ -1,10 +1,7 @@
-# Predicting Road Accident Severity
+# Task 5 Web App Development
 
-## Project Goals
-* This project aims to leverage machine learning (ML) techniques to analyze and predict road accidents in Kenya.
-* Analyze and understand the patterns and contributing factors of accidents on Kenyan roads using * historical accident data.
-* Identify accident-prone areas (hotspots) by analyzing accidents' spatial and temporal patterns.
-* Develop a machine learning model to predict the severity of accidents based on various factors such as road conditions, weather, time of day, and vehicle types.
+## Task Goals
+* Build a machine learning web app to showcase project analysis and to host machine learning model. .
 
 ## Requirements
 * pandas
@@ -15,3 +12,17 @@
 * scikit-learn
 * notebook
 * flask
+* gunicorn
+
+## Run
+To run the project you need to install the dependencies using `pip install -r requirements.txt`
+This is going to build the OmdenaKenyaRoadAccidents package in your local machine. 
+
+There are 5 major components:
+* DataIngestion class
+* DataTransformation class
+* ModelTrainer class
+* train_pipeline function
+* PredictPipeline class
+
+These components are used to download the data from Google drive, apply preprocessing, add a machine learning model and then make predictions from the form input coming from the web app. 
