@@ -202,7 +202,7 @@ form{
 .select-btn i{
     font-size: 0.725em;
     color: var(--bg-color);
-    transition: all linear 0.40s;
+    transition: all linear 0.20s;
 }
 
 .select-content{
