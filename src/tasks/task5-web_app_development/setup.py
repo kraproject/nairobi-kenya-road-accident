@@ -6,14 +6,14 @@ with open("README.md", "r", encoding="utf-8") as f:
 __version__ = "0.0.0"
 REPO_NAME = "nairobi-kenya-road-accident"
 ORGANIZATION = "OmdenaAI"
-AUTHOR_USER_NAME = "yickysan"
+AUTHOR_NAME = "Abomaye Victor"
 SRC_NAME = "OmdenaKenyaRoadAccidents"
 
 
 setuptools.setup(
     name = SRC_NAME,
     version = __version__,
-    author = AUTHOR_USER_NAME,
+    author = AUTHOR_NAME,
     description = "A python package for predicting road accidents severity in Kenya",
     long_description = long_description,
     long_description_content = "text/markdown",
