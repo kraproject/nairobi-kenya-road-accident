@@ -5,7 +5,8 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 __version__ = "0.0.0"
 REPO_NAME = "nairobi-kenya-road-accident"
-AUTHOR_USER_NAME = "OmdenaAI"
+ORGANIZATION = "OmdenaAI"
+AUTHOR_USER_NAME = "yickysan"
 SRC_NAME = "OmdenaKenyaRoadAccidents"
 
 
@@ -16,9 +17,9 @@ setuptools.setup(
     description = "A python package for predicting road accidents severity in Kenya",
     long_description = long_description,
     long_description_content = "text/markdown",
-    url = f"https://www.github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
+    url = f"https://www.github.com/{ORGANIZATION}/{REPO_NAME}",
     project_urls = {
-        "Bug Tracker": f"https://www.github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues"
+        "Bug Tracker": f"https://www.github.com/{ORGANIZATION}/{REPO_NAME}/issues"
     },
     package_dir = {"": "src"},
     packages = setuptools.find_packages(where = "src")
