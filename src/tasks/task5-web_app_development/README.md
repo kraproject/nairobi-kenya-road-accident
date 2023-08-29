@@ -33,7 +33,7 @@ The DataIngestion class `initiate_data_ingestion` method is used to download the
 ```
 from OmdenaKenyaRoadAccidents.components.data_ingestion import DataIngestion
 
-id = sYHT1jdjdieiW?ejieX3
+id = "sYHT1jdjdieiW?ejieX3"
 data_ingestion = DataIngestion()
 train_path, test_path = data_ingestion.initiate_data_ingestion(id=id)
 ```
@@ -69,4 +69,26 @@ model = DecisionTreeClassifier(class_weight="balanced")
 model_trainer = ModelTrainer()
 auc_score, _,_,_,_ = model_trainer.initiate_model_trainer(train_array, test_array, model=model)
 
+```
+
+The train_pipeline function stitches the entire training process together. the function takes two arguments, an `id` which is the file id argument required by the DataIngestion class, and an optional model argument required by the model trainer class. this fucntion is called in the main module and is used to activate the afformentioned steps performed by the three classes. The function returns a named tuple containing the afformentioned `scikit-learn` metrics
+
+#### train pipeline example
+```
+from OmdenaKenyaRoadAccidents.pipeline.train_pipeline import train_pipeline
+
+from sklearn.tree import DecisionTreeClassifier
+
+def main() -> None:
+    id = "sYHT1jdjdieiW?ejieX3"
+
+    model = DecisionTreeClassifier(class_weight="balanced")
+
+    results = train_pipeline(id=id, model=model)
+
+    print(results)
+
+
+if __name__ == "__main__":
+    main()
 ```
