@@ -92,3 +92,5 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 ```
+The PredictPipeline class gets data from the form in the web app and is used to make predictions on the web app.
+https://github.com/OmdenaAI/nairobi-kenya-road-accident/blob/02f92ffc9a9e8c34f24be54acc5a794e4305adc0/src/tasks/task5-web_app_development/app.py#L19-L35
