@@ -22,8 +22,8 @@ selectBtns.forEach(item => {
     options.forEach(option => {
         option.addEventListener("click", () => {
             inputField.style.display = "block";
-            inputField.value = option.getAttribute("id");
-            btnText.innerHTML = option.innerHTML;
+            inputField.value = option.getAttribute("class");
+            btnText.innerText = option.innerText;
             itemParent.classList.toggle("active");
         })
     })
