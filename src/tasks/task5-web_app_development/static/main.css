@@ -425,6 +425,11 @@ form{
         gap: 2em
     }
 
+    .submit-btn{
+
+        margin-bottom: 2em;
+    }
+
     .result-container{
         margin-top: 32%;
         width: 90%;
