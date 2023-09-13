@@ -15,6 +15,18 @@ def analysis():
 @app.route("/predict", methods=["GET", "POST"])
 def predict():
     return render_template("predict.html")
+	
+@app.route('/hotspots')
+def hotspots():
+    return render_template('hotspots.html')
+
+@app.route('/accident.geojson')
+def get_accident_json():
+    # Load GeoJSON data here and return it
+    geojson_data = open('static/data/accident.geojson').read()
+	
+    return geojson_data, 200, {'Content-Type': 'application/json'}
+	
 
 @app.route("/predictions", methods=["GET", "POST"])
 def make_prediction():
