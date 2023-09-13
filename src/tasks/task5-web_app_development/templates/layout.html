@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'main.css')}}">
 </head>
@@ -23,6 +24,7 @@
             <ul class="navlist" data-visible="false">
                 <li><a href="{{url_for('home')}}">Home</a></li>
                 <li><a href="{{url_for('analysis')}}">Analysis</a></li>
+				<li><a href="{{url_for('hotspots')}}">Hotspots</a></li>
                 <li><a href="{{url_for('predict')}}">Predict</a></li>
             </ul>
         </nav>
@@ -32,6 +34,9 @@
     <script src="{{url_for('static', filename = 'script.js')}}"></script>
     <script src="{{url_for('static', filename = 'mobile-nav.js')}}"></script>
     <script src="{{url_for('static', filename = 'predicted_result.js')}}"></script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='map.js') }}"></script>
     <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
 </body>
 </html>
