@@ -46,7 +46,8 @@ RAW_DATA = Path
 TRAIN_DATA = Path
 TEST_DATA =  Path
 
-def split_save_data(data_path: tuple[RAW_DATA, TRAIN_DATA, TEST_DATA], test_size: float) -> None:
+# def split_save_data(data_path: tuple[RAW_DATA, TRAIN_DATA, TEST_DATA], test_size: float) -> None:
+def split_save_data(data_path: typing.Tuple[RAW_DATA, TRAIN_DATA, TEST_DATA], test_size: float) -> None:
     """
     Function to load csv as a pandas.DataFrame object and split into train and test set
     
@@ -92,7 +93,8 @@ def clean_df(df: pd.DataFrame) -> pd.DataFrame:
     )
 
 
-def select_features(df: pd.DataFrame, k: int=6) -> np.ndarray[str]:
+# def select_features(df: pd.DataFrame, k: int=6) -> np.ndarray[str]:
+def select_features(df: pd.DataFrame, k: int=6) -> np.ndarray:
     """
     Function to select top k features from the dataframe.
     
@@ -135,10 +137,17 @@ class SklearnEstimator(typing.Protocol):
     def predict(self, X) -> np.ndarray:
         ...
 
-REPORT = dict[dict[float]]
+
+# REPORT = dict[dict[float]]
+# def evaluate_models(X_train: np.ndarray, y_train: np.ndarray,
+#                    X_test: np.ndarray, y_test: np.ndarray, 
+#                    models: dict[SklearnEstimator]) -> REPORT:
+		
+REPORT: typing.Dict[str, typing.Dict[str, float]] = {}
+		
 def evaluate_models(X_train: np.ndarray, y_train: np.ndarray,
                     X_test: np.ndarray, y_test: np.ndarray, 
-                    models: dict[SklearnEstimator]) -> REPORT:
+                    models: typing.Dict[str, SklearnEstimator]) -> REPORT:
     """
     Function to evaluate models
 
@@ -197,7 +206,8 @@ def evaluate_models(X_train: np.ndarray, y_train: np.ndarray,
     return report
 
 
-def load_artifacts() -> dict[typing.Any]:
+#def load_artifacts() -> dict[typing.Any]:
+def load_artifacts() -> typing.Dict[typing.Any, typing.Any]:
     """
     Function to load model and preprocessor
     """

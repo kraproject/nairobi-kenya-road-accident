@@ -32,7 +32,7 @@ class PredictPipeline:
         
         return df
     
-    def predict(self) -> np.ndarray[str]:
+    def predict(self) -> np.ndarray:
         self.artifacts = load_artifacts()
         df = self._create_df()
         X = self.artifacts["X_preprocessor"].transform(df)
