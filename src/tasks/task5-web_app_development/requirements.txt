@@ -7,4 +7,5 @@ scikit-learn
 notebook
 flask
 gunicorn
+requests
 -e .
