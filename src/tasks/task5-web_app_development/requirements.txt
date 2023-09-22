@@ -8,4 +8,5 @@ notebook
 flask
 gunicorn
 requests
+typing-extensions==4.4.0
 -e .
