@@ -130,7 +130,9 @@ def select_features(df: pd.DataFrame, k: int=6) -> np.ndarray:
     return kbest
 
 
-class SklearnEstimator(typing.Protocol):
+# class SklearnEstimator(typing.Protocol):
+#     pass
+class SklearnEstimator():
     def fit(self, X, y) -> None:
         ...
 
