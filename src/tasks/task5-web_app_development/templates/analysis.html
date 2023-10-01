@@ -1,6 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="container analysis" id="analysis-page">
+	<section  class="container" id="accidents-hotspots">
+	    <div class="map-container">
+			<div id="map" style="height: 500px;"></div>
+		</div>
+	</section>
+	
     <div class="plot-container">
         <figure class="plot-canvas">
             <img src="static/images/hour.png" alt="plot-accident-hours" width="1489", height="789">
@@ -19,16 +25,16 @@
                     Accidents are more common during the week days especially on Wednesdays,
                 Thursdays and Fridays. Fridays see the most accidents occur. 
                 </p>
+			</figcaption>
         </figure>
 
         <figure class="plot-canvas">
             <img src="static/images/sex_of_casualty.png" alt="plot-casualty-sex" width="1489", height="789">
-            <figcaption>
-                <figcaption>
-                    <p>
-                       Most of the casualties from road accidents are men. 
-                    </p>
-                </figcaption>
+			<figcaption>
+				<p>
+				   Most of the casualties from road accidents are men. 
+				</p>
+			</figcaption>
         </figure>
 
         <figure class="plot-canvas">

@@ -12,22 +12,24 @@
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'main.css')}}">
 </head>
 <body>
-    <header class="header container">
-        <a href="#" class="logo">
-            <img src="https://omdena.com/wp-content/uploads/2022/11/Omdena-Logo.png.webp" width="500" height="116" alt="Omdena | Building AI Solutions for Real-World Problems" id="logo" data-height-percentage="53" data-actual-width="500" data-actual-height="116">
-           
-        </a>
-        <button class="bx bx-menu mobile-navlist-btn" id="menu-icon" type="button" aria-controls="navlist" aria-expanded="false">
-            <span class="sr-only">Menu</span>
-        </button>
-        <nav>
-            <ul class="navlist" data-visible="false">
-                <li><a href="{{url_for('home')}}">Home</a></li>
-                <li><a href="{{url_for('analysis')}}">Analysis</a></li>
-				<li><a href="{{url_for('hotspots')}}">Hotspots</a></li>
-                <li><a href="{{url_for('predict')}}">Predict</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+		<div class="container header-content">
+			<a href="/" class="logo">
+				<img src="https://omdena.com/wp-content/uploads/2022/11/Omdena-Logo.png.webp" width="500" height="116" alt="Omdena | Building AI Solutions for Real-World Problems" id="logo" data-height-percentage="53" data-actual-width="500" data-actual-height="116">
+			   
+			</a>
+			<button class="bx bx-menu mobile-navlist-btn" id="menu-icon" type="button" aria-controls="navlist" aria-expanded="false">
+				<span class="sr-only">Menu</span>
+			</button>
+			<nav>
+				<ul class="navlist" data-visible="false">
+					<li><a href="{{url_for('home')}}">Home</a></li>
+					<li><a href="{{url_for('analysis')}}">Analysis</a></li>
+					<!-- <li><a href="{{url_for('hotspots')}}">Hotspots</a></li> -->
+					<li><a href="{{url_for('predict')}}">Predict</a></li>
+				</ul>
+			</nav>
+		</div>
     </header>
     {% block content %}
     {% endblock %}
