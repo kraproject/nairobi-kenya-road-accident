@@ -38,6 +38,7 @@ body{
     color: var(--text-color);
     background: var(--bg-color);
     overflow-x: hidden;
+	line-height: 1.5;
 }
 
 
@@ -128,6 +129,10 @@ h2{
     color: var(--heading-color);
 }
 
+p {
+    margin-bottom: 1rem;
+}
+
 /* Home Page CSS */
 .section, 
 section {
@@ -183,6 +188,10 @@ section {
     margin-bottom: 3rem;
 }
 
+.plot-container h2{
+    text-align: center;
+}
+
 .plot-canvas {
     display: grid;
     gap: 3rem 1rem;
@@ -199,9 +208,16 @@ section {
 }
 
 .plot-canvas figcaption{
-	font-size: 1.3rem;
+	font-size: 1.1rem;
     margin: auto;
     /* margin-bottom: 2em; */
+}
+
+.plot-canvas em{
+    color: var(--heading-color);
+    font-weight: bold;
+    /* font-size: larger; */
+	font-size: 1.1em;
 }
 
 /* Predict Section */
@@ -328,7 +344,7 @@ form{
 .map-container {
 	width: 100%;
 	padding: 1.5rem;
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
     margin-bottom: 3rem;
 }
 
