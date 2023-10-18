@@ -31,14 +31,21 @@
 			</nav>
 		</div>
     </header>
-    {% block content %}
-    {% endblock %}
+	<main id="site-main" class="main-content" role="main">
+	
+		{% block content %}
+		{% endblock %}
+	
+	</main>
+	
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="{{url_for('static', filename = 'script.js')}}"></script>
-    <script src="{{url_for('static', filename = 'mobile-nav.js')}}"></script>
-    <script src="{{url_for('static', filename = 'predicted_result.js')}}"></script>
+    <!-- <script src="{{url_for('static', filename = 'mobile-nav.js')}}"></script> -->
+    <!-- <script src="{{url_for('static', filename = 'predicted_result.js')}}"></script> -->
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="{{ url_for('static', filename='map.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='map.js') }}"></script> -->
+	<!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> -->
+
     <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
 </body>
 </html>
