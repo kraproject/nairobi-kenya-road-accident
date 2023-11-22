@@ -2,7 +2,11 @@
  * Initialize map as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {  
-  initMap();
+	if(document.getElementById("map")) {
+        // If in analysis page (map container exists), initiate map
+        initMap();
+    }
+
 });
 
 

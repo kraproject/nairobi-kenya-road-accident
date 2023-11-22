@@ -99,52 +99,37 @@
             </div>
         </div>
 
-        <div class="select-container" id="no-of-vehicles-involved">
-            <div class="select-btn" type="button">
-                <span>No of Vehicle Involved in Accidents</span>
-                <i class='bx bxs-down-arrow'></i>
-            </div>
+				<div class="select-container" id="no-of-vehicles-involved">
+					<label for="no-of-vehicles-involved">No of Vehicle Involved in Accidents</label>
+					<select id="no-of-vehicles-involved" name="no-of-vehicles-involved" required>
+						<option value="">Choose</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<!-- Add the rest of the options -->
+					</select>
+				</div>
 
-            <div class="select-content">
-                <ul class="select-options">
-                    <li class="1">1</li>
-                    <li class="2">2</li>
-                    <li class="3">3</li>
-                    <li class="4">4</li>
-                    <li class="6">6</li>
-                    <li class="7">7</li>
-                </ul> 
-                <input type="text" class="text-input" name="no-of-vehicles-involved" value="" style="visibility: hidden;" required> 
-                
-            </div>
-        </div>
+				<div class="select-container" id="driving-experience">
+					<label for="driving-experience">Driver's Experience</label>
+					<select id="driving-experience" name="driving-experience" required>
+						<option value="">Choose</option>
+						<option value="Below 1yr">Below 1 year</option>
+						<option value="1-2yr">1 to 2 years</option>
+						<!-- Add the rest of the options -->
+					</select>
+				</div>
 
-        <div class="select-container" id="driving-experience">
-            <div class="select-btn" type="button">
-                <span>Driver's Experience</span>
-                <i class='bx bxs-down-arrow'></i>
-            </div>
+			</div>
+			
+		</div>
+		
+		<button type="submit" class="submit-btn">Submit</button>
+	</form>
 
-            <div class="select-content">
-                <ul class="select-options">
-                    <li class="Below 1yr">Below 1 year</li>
-                    <li class="1-2yr">1 to 2 years</li>
-                    <li class="2-5yr">2 to 5 years</li>
-                    <li class="5-10yr">5 to 10 years</li>
-                    <li class="Above 10yr">Above 10 years</li>
-                    <li class="No Licence">No licence</li>
-                </ul> 
-                <input type="text" class="text-input" name="driving-experience" value="" style="visibility: hidden;" required>
-                
-            </div>
-        </div>
-
-
-        <button type="submit" class="submit-btn">Submit</button>
-    </form>
+	
     {% if result_p  %}
         <div class="result-container">
-            <p class="result-text"> {{result_p}}</p>
+            <p id="pred-result" class="result-text"> {{result_p}}</p>
         </div>
     {% endif %}
 </div>
