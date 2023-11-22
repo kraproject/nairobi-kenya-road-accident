@@ -3,59 +3,82 @@
 <div class="container predict" id="predict-page">
     <form class="predict-form" action="{{url_for('make_prediction')}}" method="post">
 
-        <div class="select-container" id="vehicle-defect">
+        <!-- Add day of the week -->
+        <div class="select-container" id="day-of-week">
             <div class="select-btn" type="button">
-                <span class="btn-text">No of Defects in Vehicle</span>
+                <span class="btn-text">Day of the Week</span>
                 <i class='bx bxs-down-arrow'></i>
             </div>
 
             <div class="select-content">
                 <ul class="select-options">
-                    <li class="0">None</li>
-                    <li class="5">Not more than 5</li>
-                    <li class="7">More than 5</li>
+                    <li class="mon">Monday</li>
+                    <li class="tue">Tuesday</li>
+                    <li class="wed">Wednesday</li>
+                    <li class="thu">Thursday</li>
+                    <li class="fri">Friday</li>
+                    <li class="sat">Saturday</li>
+                    <li class="sun">Sunday</li>
                 </ul> 
-                <input type="text" class="text-input" name="vehicle-defect" value="" style="visibility: hidden;" required>    
+                <input type="text" class="text-input" name="day-of-week" value="" style="visibility: hidden;" required>    
             </div>
         </div>
 
+        <!-- Age band of the driver -->
         <div class="select-container" id="driver-age">
             <div class="select-btn" type="button">
-                <span>Age</span>
+                <span class="btn-text">Age Band of Driver</span>
                 <i class='bx bxs-down-arrow'></i>
             </div>
 
             <div class="select-content">
                 <ul class="select-options">
-                    <li class="Under 18">Below 18</li>
-                    <li class="18-30">18 to 30 years old</li>
-                    <li class="31-50">31 to 50 years old</li>
-                    <li class="Over 51">Above 51 years old</li>
-                </ul>  
-                <input type="text" class="text-input" name="driver-age" value="" style="visibility: hidden;" required>
-                
+                    <li class="u-18">Under 18</li>
+                    <li class="018-30">18-30</li>
+                    <li class="o31-50">31-50</li>
+                    <li class="o-51">Over 51</li>
+                    <li class="unknown-age">Unknown</li>
+                </ul> 
+                <input type="text" class="text-input" name="driver-age" value="" style="visibility: hidden;" required>    
             </div>
         </div>
 
-        <div class="select-container" id="light-condition">
+        <!-- Sex of driver -->
+        <div class="select-container" id="driver-sex">
             <div class="select-btn" type="button">
-                <span>Lighting</span>
+                <span>Sex of Driver</span>
                 <i class='bx bxs-down-arrow'></i>
             </div>
 
             <div class="select-content">
                 <ul class="select-options">
-                    <li class="Daylight">Daylight</li>
-                    <li class="Darkness - lights lit">Darkness with lights on</li>
-                    <li class="Darkness - no lighting">Darkness with no lights on the road</li> 
-                    <li class="Darkness - lights unlit">Darkness with lights off</li>
+                    <li class="male">Male</li>
+                    <li class="female">Female</li>
+                    <li class="unkown-sex">Unknown</li>
                 </ul>  
-                <input type="text" class="text-input" name="light-condition" value="" style="visibility: hidden ;" required>
-                
+                <input type="text" class="text-input" name="driver-sex" value="" style="visibility: hidden;" required>
                 
             </div>
         </div>
 
+        <!-- Vehicle-Driver Relation -->
+        <div class="select-container" id="veh-driv-rln">
+            <div class="select-btn" type="button">
+                <span>Vehicle Driver Relation</span>
+                <i class='bx bxs-down-arrow'></i>
+            </div>
+
+            <div class="select-content">
+                <ul class="select-options">
+                    <li class="owner">Owner</li>
+                    <li class="employee">Employee</li>
+                    <li class="other">Other</li> 
+                </ul>  
+                <input type="text" class="text-input" name="veh-driv-rln" value="" style="visibility: hidden ;" required>   
+            </div>
+        </div>
+
+        <!-- Cause of Accident -->
         <div class="select-container" id="cause-of-accident">
             <div class="select-btn" type="button">
                 <span>Cause Of Accident</span>
@@ -64,29 +87,15 @@
 
             <div class="select-content">
                 <ul class="select-options">
-                    <li class="No priority to vehicle">No priority to vehicle</li>
-                    <li class="Driving under the influence of drugs">Driving under influence of drugs</li>
-                    <li class="Changing lane to the right">Changing lane to the right</li>
-                    <li class="Changing lane to the left">Changing lane to the left</li>
-                    <li class="No distancing">No distancing</li>
-                    <li class="Driving carelessly">Careless driving</li>
-                    <li class="Driving to the left">Driving to the left</li>
-                    <li class="Moving Backward">Moving backwards</li>
-                    <li class="No priority to pedestrian">No priority to pedestrian</li>
-                    <li class="Driving at high speed">Driving at high speed</li>
-                    <li class="Overtaking">Overtaking</li>
-                    <li class="Getting off the vehicle improperly">Getting off vehicle improperly</li>
-                    <li class="Turnover">Turnover</li>
-                    <li class="Overspeed">Driving above speed limit</li>
-                    <li class="Overturning">Overturning</li>
-                    <li class="Improper parking">Improper parking</li>
-                    <li class="Drunk driving">Drunk driving</li>
-                    <li class="Overloading">Overloading</li>
-                    <li class="Other">Other</li>
+                    <li class="changing-lane">Changing lane</li>
+                    <li class="careless-driving">Careless driving</li>
+                    <li class="no-distance">No distancing</li>
+                    <li class="moving-back">Moving Backward</li>
+                    <li class="overtaking">Overtaking</li>
+                    <li class="driving-drugs">Driving under the influence of drugs</li>
+                    <li class="other">Other</li>
                 </ul> 
-                <input type="text" class="text-input" name="cause-of-accident" value="" style="visibility: hidden;" required> 
-                
-                
+                <input type="text" class="text-input" name="cause-of-accident" value="" style="visibility: hidden;" required>     
             </div>
         </div>
 

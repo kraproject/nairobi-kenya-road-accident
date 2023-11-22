@@ -2,7 +2,6 @@ model_features
 day_of_week
 age_band_of_driver
 sex_of_driver
-educational_level
 vehicle_driver_relation
 driving_experience
 type_of_vehicle
@@ -13,15 +12,8 @@ lanes_or_medians
 road_allignment
 types_of_junction
 road_surface_type
-road_surface_conditions
 light_conditions
 weather_conditions
 type_of_collision
 number_of_vehicles_involved
-vehicle_movement
-casualty_class
-sex_of_casualty
-age_band_of_casualty
-fitness_of_casualty
-pedestrian_movement
 cause_of_accident
